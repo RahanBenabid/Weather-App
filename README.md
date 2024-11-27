@@ -37,3 +37,5 @@ python3 -m http.server 5500 # This starts a simple HTTP server on port 5500
 ```
 
 Go to http://localhost:5500 in your browser, and you should be able to see the index page, now simply write a country name in the input.
+
+> for the app to work, you need to have your redis server running in the background
