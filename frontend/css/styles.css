@@ -1,0 +1,77 @@
+:root {
+    --primary-blue: #3498db;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--primary-blue);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.weather-container {
+    max-width: 480px;
+    margin: auto;
+    padding: 20px;
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.temp-graph {
+    position: relative;
+    height: 100px;
+}
+
+.temp-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #4caf50; /* Adjust color as needed */
+    top: 50%;
+}
+
+.weather-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.detail-card h6 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.detail-card .value {
+    font-size: 1.5rem;
+}
+
+.gauge-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .weather-container {
+        padding: 10px;
+        max-width: calc(100% - 20px);
+    }
+}

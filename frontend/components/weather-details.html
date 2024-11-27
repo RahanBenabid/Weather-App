@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Météo Sétif - Détails</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>17:42</span>
+      <div class="status-icons">
+        <i class="fas fa-wifi"></i>
+        <span>4G</span>
+        <i class="fas fa-battery-three-quarters"></i>
+      </div>
+    </div>
+
+    <div class="weather-container">
+      <!-- Location Header -->
+      <div class="location-header">
+        <div class="city-name">
+          Sétif
+          <small><i class="fas fa-plane-departure"></i></small>
+        </div>
+        <div>
+          <i class="fas fa-plus"></i>
+          <i class="fas fa-ellipsis-v ms-3"></i>
+        </div>
+      </div>
+
+      <!-- Main Temperature Display -->
+      <div class="temperature-display">
+        <div class="current-temp">14°</div>
+        <div>Dégagé 20°/4°</div>
+        <div><i class="fas fa-leaf"></i> IQA 41</div>
+      </div>
+
+      <!-- 5-Day Forecast -->
+      <div class="weather-card">
+        <div class="forecast-header">
+          <div>
+            <i class="far fa-calendar"></i>
+            Prévisions sur 5 jours
+          </div>
+          <a href="#" class="text-white">Plus de détails ›</a>
+        </div>
+
+        <div class="forecast-list">
+          <div class="forecast-item">
+            <span>Aujourd'hui</span>
+            <i class="fas fa-moon"></i>
+            <div class="temp-range">
+              <span>4°</span>
+              <div class="temp-bar"></div>
+              <span>20°</span>
+            </div>
+          </div>
+
+          <div class="forecast-item">
+            <span>Demain</span>
+            <i class="fas fa-cloud-sun"></i>
+            <div class="temp-range">
+              <span>6°</span>
+              <div class="temp-bar"></div>
+              <span>20°</span>
+            </div>
+          </div>
+
+          <div class="forecast-item">
+            <span>Mer.</span>
+            <i class="fas fa-cloud-sun"></i>
+            <div class="temp-range">
+              <span>7°</span>
+              <div class="temp-bar"></div>
+              <span>19°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navigation-bar">
+      <a href="#" class="nav-item"><i class="fas fa-square"></i></a>
+      <a href="#" class="nav-item active"><i class="fas fa-circle"></i></a>
+      <a href="#" class="nav-item"><i class="fas fa-chevron-left"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/weather-details.js"></script>
+  </body>
+</html>

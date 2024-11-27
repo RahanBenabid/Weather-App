@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="weather-container">
+        <!-- Location Header -->
+        <div class="location-header">
+            <div>
+                <h2 id="city-name">City Name</h2>
+                <small><i class="fas fa-plane-departure"></i></small>
+            </div>
+            <div>
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+
+        <!-- City Input and Fetch Button -->
+        <div class="input-group mb-3">
+            <input type="text" id="city-input" class="form-control" placeholder="Enter city name" aria-label="City name">
+            <button class="btn btn-primary" id="fetch-weather">Get Weather</button>
+        </div>
+
+        <!-- Main Temperature Display -->
+        <div class="text-center mb-4 temperature-display">
+            <div class="current-temp" id="current-temp">--°</div>
+            <div id="weather-description">Weather Description</div>
+            <small id="humidity-info">Humidity: --%</small>
+        </div>
+
+        <!-- Weather Info Grid -->
+        <div class="weather-details-grid">
+            <!-- Current Conditions -->
+            <div class="detail-card">
+                <h6>Temperature</h6>
+                <div class="value" id="temperature">--°</div>
+            </div>
+
+            <!-- Humidity -->
+            <div class="detail-card">
+                <h6>Humidity</h6>
+                <div class="value" id="humidity">--%</div>
+            </div>
+
+            <!-- Feels Like -->
+            <div class="detail-card">
+                <h6>Feels Like</h6>
+                <div class="value" id="feels-like">--°</div>
+            </div>
+
+            <!-- Wind Speed -->
+            <div class="detail-card">
+                <h6>Wind Speed</h6>
+                <div class="value" id="wind-speed">-- km/h</div>
+            </div>
+
+            <!-- Pressure -->
+            <div class="detail-card">
+                <h6>Pressure</h6>
+                <div class="value" id="pressure-value">-- hPa</div>
+            </div>
+
+            <!-- Sunrise -->
+            <div class="detail-card">
+                <h6>Sunrise</h6>
+                <div class="value" id="sunrise-time">--:--</div>
+            </div>
+
+            <!-- Sunset -->
+            <div class="detail-card">
+                <h6>Sunset</h6>
+                <div class="value" id="sunset-time">--:--</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/weather-app.js"></script>
+</body>
+</html>
