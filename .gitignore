@@ -47,3 +47,4 @@ coverage/
 *.spec.js
 tasks.json
 *.paw
+sample.json
