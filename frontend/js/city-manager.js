@@ -71,14 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!weatherData) continue;
 
       const { currentConditions } = weatherData.data;
-      const { resolvedAddress } = weatherData.data;
+      const { address } = weatherData.data;
       const { description } = weatherData.data;
       const temp = currentConditions.temp;
       const highTemp = weatherData.data.days[0].tempmax; // Assuming today's high
       const lowTemp = weatherData.data.days[0].tempmin;  // Assuming today's low
 
       // Create a city card for each cached country
-      createCityCard(resolvedAddress, description, temp, highTemp, lowTemp);
+      createCityCard(address, description, temp, highTemp, lowTemp);
     }
   }
 
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ country: city.toLowerCase() }),
+        body: JSON.stringify({ country: city }),
       });
 
       // Optionally, re-fetch cached countries after adding a new one
