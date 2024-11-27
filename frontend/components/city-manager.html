@@ -1,76 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gérer les villes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/city-manager.css" />
-</head>
-<body>
-    <!-- Status Bar -->
-    <div class="status-bar">
-        <span>12:19</span>
-        <div class="status-icons">
-            <i class="fas fa-wifi"></i>
-            <span>4G</span>
-            <i class="fas fa-battery-three-quarters"></i>
-            <span>88%</span>
-        </div>
-    </div>
-
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <a href="#" class="back-button">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <h1 class="page-title">Gérer les villes</h1>
-        </div>
-
-        <!-- Search Box -->
-        <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Saisir la ville" />
-        </div>
-
-        <!-- City Cards -->
-        <div class="city-list">
-            <div class="city-card">
-                <div class="city-info">
-                    <div class="city-name">'Ain Tebinet<i class="fas fa-map-marker-alt"></i></div>
-                    <div class="weather-condition">Dégagé 20° / 6°</div>
-                </div>
-                <div class="temperature">12°</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gérer les villes</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/city-manager.css" />
+    </head>
+    <body>
+        
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <a href="../components/index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Gérer les villes</h1>
             </div>
-
-            <div class="city-card">
-                <div class="city-info">
-                    <div class="city-name">Alger</div>
-                    <div class="weather-condition">Dégagé 23° / 12°</div>
-                </div>
-                <div class="temperature">22°</div>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Saisir la ville" />
             </div>
-
-            <div class="city-card">
-                <div class="city-info">
-                    <div class="city-name">Sétif</div>
-                    <div class="weather-condition">Dégagé 20° / 4°</div>
-                </div>
-                <div class="temperature">14°</div>
+            
+            <!-- City Cards -->
+            <div class="city-list">
             </div>
+            
         </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="navigation-bar">
-        <a href="#" class="nav-item"><i class="fas fa-square"></i></a>
-        <a href="#" class="nav-item active"><i class="fas fa-circle"></i></a>
-        <a href="#" class="nav-item"><i class="fas fa-chevron-left"></i></a>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/city-manager.js"></script>
-</body>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/city-manager.js"></script>
+    </body>
 </html>
