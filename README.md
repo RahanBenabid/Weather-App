@@ -44,3 +44,5 @@ Go to http://localhost:5500 in your browser, and you should be able to see the i
 brew install redis
 brew services start redis
 ```
+
+This is required since I used the `Redis` module in Node.js to store the countries that have already been searched in the Cache for better user experience.
