@@ -2,6 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.querySelector(".search-box input");
   const cityList = document.querySelector(".city-list");
 
+
+  // Function to display all cached countries as city cards
+  async function displayCachedCities() {
+    const cachedCountries = await fetchCachedCountries();
+    if (!cachedCountries.length) return;
+    
+    for (const country of cachedCountries) {
+      const weatherData = await fetchWeather(country);
+      if (!weatherData) continue;
+      
+      const { currentConditions } = weatherData.data;
+      const { address } = weatherData.data;
+      const { description } = weatherData.data;
+      const temp = currentConditions.temp;
+      const highTemp = weatherData.data.days[0].tempmax; // Assuming today's high
+      const lowTemp = weatherData.data.days[0].tempmin;  // Assuming today's low
+      
+      // Create a city card for each cached country
+      createCityCard(address, description, temp, highTemp, lowTemp);
+    }
+  }
+
   // Function to fetch weather data
   async function fetchWeather(city) {
     try {
@@ -41,12 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cityList.appendChild(card);
   }
 
-  // Function to clear city cards
-  function clearCityList() {
-    while (cityList.firstChild) {
-      cityList.removeChild(cityList.firstChild);
-    }
-  }
+
 
   // Function to fetch all cached countries from Redis
   async function fetchCachedCountries() {
@@ -61,24 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to display all cached countries as city cards
-  async function displayCachedCities() {
-    const cachedCountries = await fetchCachedCountries();
-    if (!cachedCountries.length) return;
-
-    for (const country of cachedCountries) {
-      const weatherData = await fetchWeather(country);
-      if (!weatherData) continue;
-
-      const { currentConditions } = weatherData.data;
-      const { address } = weatherData.data;
-      const { description } = weatherData.data;
-      const temp = currentConditions.temp;
-      const highTemp = weatherData.data.days[0].tempmax; // Assuming today's high
-      const lowTemp = weatherData.data.days[0].tempmin;  // Assuming today's low
-
-      // Create a city card for each cached country
-      createCityCard(address, description, temp, highTemp, lowTemp);
+          
+  // Function to clear city cards
+  function clearCityList() {
+    while (cityList.firstChild) {
+      cityList.removeChild(cityList.firstChild);
     }
   }
 
